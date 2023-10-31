@@ -93,8 +93,8 @@ $totalPages: 8;
   top: 50%;
   transform: translateY(-50%);
   perspective: var(--perspective);
-  box-shadow: 0 41px 38px -20px #0a3150;
-  max-width: 1300px;
+  box-shadow: 0 41px 38px -40px #252a2e;
+  max-width: 1400px;
   aspect-ratio: 1.778 / 1;
   border-radius: 10px;
 
@@ -364,9 +364,7 @@ $totalPages: 8;
 
     &#page1 {
       .pages_page__inner {
-        // background-size: 880px !important;
-        // background-position: center !important;
-        // background: var(--background) url("/wedding/img/bg-1.png") no-repeat;
+        background: var(--background) url("/wedding/img/page1-2.jpg") no-repeat left top / contain;
       }
     }
 
@@ -376,10 +374,16 @@ $totalPages: 8;
           color: black;
           z-index: 3;
         }
-        background-size: 870px !important;
-        background-position: center !important;
-        background: url("https://cdnfl01.viewbug.com/media/mediafiles/2017/10/16/75667840_large.jpg");
-        // background: url("https://data.whicdn.com/images/86911589/original.jpg");
+        .bg {
+          -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%);
+          clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%);
+          height: 100%;
+          width: 200%;
+          position: relative;
+          background: var(--background) url("/wedding/img/page1-2.jpg") no-repeat left top / contain;
+          background-size: 1400px !important;
+          left: -100%;
+        }
       }
     }
 
@@ -397,12 +401,6 @@ $totalPages: 8;
           width: 200%;
           position: absolute;
         }
-      }
-    }
-
-    &#page6 {
-      .pages_page__inner {
-        background: #4a5f5c;
       }
     }
 
@@ -438,6 +436,13 @@ $totalPages: 8;
         background-position: center !important;
       }
     }
+
+    &#page6 {
+      .pages_page__inner {
+        background: #4a5f5c;
+      }
+    }
+
 
     &#page7 {
       .pages_page__inner {
