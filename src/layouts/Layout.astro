@@ -1,41 +1,122 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<!-- <meta name="viewport" content="width=device-width" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <!-- <meta name="viewport" content="width=device-width" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/wedding/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/wedding/css/sakura.min.css" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div id="device-warning">
+      <div class="phone"></div>
+      <div class="message">Vui lòng <br /> chuyển sang màn hình ngang</div>
+    </div>
+    <slot />
+    <script is:inline src="/wedding/js/sakura.js"></script>
+    <script>
+      const sakura = new Sakura("body", {
+        colors: [
+          {
+            gradientColorStart: "#3076FF",
+            gradientColorEnd: "#6E9FFF",
+            gradientColorDegree: 120,
+          },
+        ],
+      });
+    </script>
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), rgb(var(--accent-light)) 30%, white 60%);
-	}
-	html {
-		/* font-family: system-ui, sans-serif;
-		background: #13151A;
-		background-size: 224px; */
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    /* background: var(--background) url("/wedding/img/bg.jpg") no-repeat left top; */
+    background-color: #b1c8aa;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Sree Krushnadevaraya", serif;
+  }
+  @media screen and (orientation: landscape) {
+    #device-warning {
+      display: none;
+    }
+  }
+  @media screen and (orientation: portrait) {
+    .pages {
+      display: none;
+    }
+    #device-warning {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+    }
+  }
+
+  #device-warning .phone {
+    height: 50px;
+    width: 100px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    animation: rotate 1.5s ease-in-out infinite alternate;
+    position: relative;
+  }
+
+  #device-warning .phone:before {
+    content: '';
+    background: #fff url(https://upload.wikimedia.org/wikipedia/commons/3/3b/Eo_circle_green_checkmark.svg) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    transform: rotate(90deg)
+  }
+
+  #device-warning .message {
+    font-family: Arial, sans-serif;
+    color: #eb6e09;
+    font-size: 1em;
+    margin-top: 40px;
+    text-align: center;
+    /* text-transform: uppercase; */
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg)
+    }
+    50% {
+      transform: rotate(-90deg)
+    }
+    100% {
+      transform: rotate(-90deg)
+    }
+  }
 </style>
