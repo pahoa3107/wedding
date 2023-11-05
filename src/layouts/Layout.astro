@@ -9,18 +9,42 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <!-- <meta name="viewport" content="width=device-width" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+
     <link rel="icon" type="image/svg+xml" href="/wedding/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
     />
     <link rel="stylesheet" href="/wedding/css/sakura.min.css" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Hai Anh & Nam Tran Wedding" />
+    <meta
+      name="description"
+      content="Invite you to join us at the celebration of our wedding"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vuhaianh.com/wedding" />
+    <meta property="og:title" content="Hai Anh & Nam Tran Wedding" />
+    <meta
+      property="og:description"
+      content="Invite you to join us at the celebration of our wedding"
+    />
+    <meta property="og:image" content="/wedding/img/page1-2.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://vuhaianh.com/wedding" />
+    <meta property="twitter:title" content="Hai Anh & Nam Tran Wedding" />
+    <meta
+      property="twitter:description"
+      content="Invite you to join us at the celebration of our wedding"
+    />
+    <meta property="twitter:image" content="/wedding/img/page1-2.jpg" />
   </head>
   <body>
     <div id="device-warning">

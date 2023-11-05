@@ -375,7 +375,7 @@ $totalPages: 8;
       .pages_page__inner {
         background: var(--background) url("/wedding/img/page1-2.jpg") no-repeat;
         background-position: 0 0;
-          background-size: auto 100% !important;
+        background-size: auto 100% !important;
       }
     }
 
@@ -391,8 +391,8 @@ $totalPages: 8;
           height: 100%;
           width: 200%;
           position: relative;
-          background: var(--background) url("/wedding/img/page1-2.jpg") no-repeat;
-          // background-size: 1400px !important;
+          background: var(--background) url("/wedding/img/page1-2.jpg")
+            no-repeat;
           background-size: auto 100%;
           left: -100%;
         }
@@ -401,8 +401,8 @@ $totalPages: 8;
 
     &#page3 {
       .pages_page__inner {
-        // background: url("https://iso.500px.com/wp-content/uploads/2014/12/fashion_1.jpg");
-        background: url("/wedding/img/bg-1.png") no-repeat;
+        background: url("/wedding/img/page3-4.jpg") no-repeat;
+        background-size: auto 100% !important;
         background-position: 0 0;
 
         .content {
@@ -433,9 +433,8 @@ $totalPages: 8;
           height: 100%;
           width: 200%;
           position: relative;
-          // background: url("https://iso.500px.com/wp-content/uploads/2014/12/fashion_1.jpg");
-          background: url("/wedding/img/bg-1.png") no-repeat;
-          background-size: 1400px !important;
+          background: url("/wedding/img/page3-4.jpg") no-repeat;
+          background-size: auto 100% !important;
           left: -100%;
         }
       }
@@ -443,25 +442,23 @@ $totalPages: 8;
 
     &#page5 {
       .pages_page__inner {
-        background: url("http://cdn.lightgalleries.net/4d80d92265da9/images/Tayna16-12_90574-2.jpg");
-        background-size: 870px !important;
-        background-position: center !important;
+        // background: url("/wedding/img/");
+        // background-size: auto 100% !important;
+        // background-position: center !important;
       }
     }
 
     &#page6 {
       .pages_page__inner {
-        background: #4a5f5c;
+        background: #fbfaf5;
       }
     }
 
-
     &#page7 {
       .pages_page__inner {
-        background: url("http://ruthrose.co.uk/wp-content/uploads/2018/04/lingerie-fashion-photographer-photography-shoot-fitness-swimwear-shoot180317_POCKET9661-f1.jpg");
-
+        background: url("/wedding/img/page7-8.jpg");
         background-position: 0 0;
-        background-size: 1400px !important;
+        background-size: auto 100% !important;
       }
     }
 
@@ -508,7 +505,8 @@ $totalPages: 8;
 
     &#page8 {
       .pages_page__inner {
-        background: url("http://ruthrose.co.uk/wp-content/uploads/2018/04/lingerie-fashion-photographer-photography-shoot-fitness-swimwear-shoot180317_POCKET9661-f1.jpg");
+        background: url("/wedding/img/page7-8.jpg");
+        background-size: auto 100% !important;
         background-position: 0 0;
 
         .content {
@@ -526,16 +524,14 @@ $totalPages: 8;
           height: 100%;
           width: 200%;
           position: relative;
-          background: url("http://ruthrose.co.uk/wp-content/uploads/2018/04/lingerie-fashion-photographer-photography-shoot-fitness-swimwear-shoot180317_POCKET9661-f1.jpg");
-          background-size: 1400px !important;
+          background: url("/wedding/img/page7-8.jpg");
+          background-size: auto 100% !important;
           left: -100%;
         }
       }
     }
 
     &__inner {
-      // background: url("https://www.colorfusionstudio.com/wp-content/uploads/2015/07/cfs-models-003-683x1024.jpg");
-      background-size: 1400px !important;
       height: 100%;
       transform-style: preserve-3d;
 
