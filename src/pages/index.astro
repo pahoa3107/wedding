@@ -4,13 +4,19 @@ import Card from "../components/Card.astro";
 import "../assets/css/style.scss";
 ---
 
+<!-- <script>
+  document.addEventListener("click", function (e) {
+    const song = document.getElementById("song") as HTMLAudioElement;
+    song.play();
+  });
+</script> -->
+
 <Layout title="Hai Anh & Nam Tran Wedding">
-  <audio autoplay hidden loop>
+  <!-- <audio id="song" autoplay hidden loop playsinline>
     <source src="/wedding/media/yeulacuoi.mp3" data-track-number="1" />
-  </audio>
+  </audio> -->
 
-
-  <main class="pages">
+  <main class="pages" style="position: relative;">
     <input id="one" name="trigger" type="radio" />
     <input id="two" name="trigger" type="radio" />
     <input id="three" name="trigger" type="radio" />
@@ -50,7 +56,7 @@ import "../assets/css/style.scss";
         <div class="control">
           <label for="one"></label>
         </div>
-        <div class="content">
+        <!-- <div class="content">
           <div class="content_picture">
             <img
               src="https://i.pinimg.com/originals/1f/bc/f1/1fbcf1c55e839cd7b4aa28c4902669be.jpg"
@@ -108,7 +114,7 @@ import "../assets/css/style.scss";
             <span>r</span>
             <span>e</span>
           </h1>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -129,7 +135,7 @@ import "../assets/css/style.scss";
           <i class="far fa-heart"></i>
           <i class="far fa-share-square"></i>
         </div>
-        <div class="content">
+        <!-- <div class="content">
           <div class="content_quote">
             <h5>
               <span class="quo">
@@ -189,7 +195,7 @@ import "../assets/css/style.scss";
             <span>r</span>
             <span>e</span>
           </h1>
-        </div>
+        </div> -->
       </div>
     </div>
 
