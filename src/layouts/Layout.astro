@@ -73,11 +73,11 @@ const { title } = Astro.props;
   body {
     margin: 0;
     padding: 0;
-    /* background: var(--background) url("/wedding/img/bg.jpg") no-repeat left top; */
     background-color: #c5c7af;
     height: 100vh;
     overflow: hidden;
     font-family: "Sree Krushnadevaraya", serif;
+    font-size: 16px;
   }
   @media screen and (orientation: landscape) {
     #device-warning {
@@ -110,8 +110,7 @@ const { title } = Astro.props;
 
   #device-warning .phone:before {
     content: "";
-    background: #fff
-      url(https://upload.wikimedia.org/wikipedia/commons/3/3b/Eo_circle_green_checkmark.svg)
+    background: url(https://upload.wikimedia.org/wikipedia/commons/3/3b/Eo_circle_green_checkmark.svg)
       no-repeat center center;
     background-size: contain;
     position: absolute;
