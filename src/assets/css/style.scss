@@ -28,10 +28,11 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   html,
   body {
     font-size: 12px !important;
+    overflow: hidden !important;
   }
 }
 
@@ -562,6 +563,52 @@ body {
           }
         }
       }
+
+      @media screen and (max-width: 1000px) {
+        .pages_page__inner {
+          .content {
+            overflow: auto !important;
+            -webkit-overflow-scrolling: touch;
+            position:static;
+            max-height: calc(100vh - 50px);
+            display: flex;
+            flex-flow: column;
+            h1 {
+              font-size: 4vw;
+              order: 1;
+              padding: 7.57% 7% 0;
+            }
+
+            &_picture, &_offset {
+              position: static !important;
+              margin-left: 10%;
+              transform: none;
+            }
+
+            &_picture {
+              margin-top: 10px;
+              &.left {
+                order: 3;
+              }
+
+              &.right {
+                order: 5;
+              }
+            }
+
+            &_offset {
+              width: 45%;
+              transform: none;
+              &.left {
+                order: 2;
+              }
+              &.right {
+                order: 4;
+              }
+            }
+          }
+        }
+      }
     }
 
     &#page4 {
@@ -591,11 +638,26 @@ body {
           left: -100%;
         }
       }
+
+      @media screen and (max-width: 1000px) {
+        .pages_page__inner {
+          .content {
+            h1 {
+              font-size: 4vw;
+              padding: 7.57% 7% 0;
+            }
+
+            &_picture {
+              position: static !important;
+            }
+          }
+        }
+      }
     }
 
     &#page5 {
       .pages_page__inner {
-        background: url("/wedding/img/page1-2.jpg") no-repeat;
+        background: url("/wedding/img/page5-6.jpg") no-repeat;
         background-size: auto 100% !important;
         background-position: 0 0 !important;
       }
@@ -630,7 +692,7 @@ body {
           height: 100%;
           width: 200%;
           position: relative;
-          background: url("/wedding/img/page1-2.jpg") no-repeat;
+          background: url("/wedding/img/page5-6.jpg") no-repeat;
           background-size: auto 100% !important;
           background-position: 0 0 !important;
           left: -100%;

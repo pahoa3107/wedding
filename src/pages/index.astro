@@ -15,10 +15,29 @@ const title = "Hai Anh & Nam Tran Wedding";
 ---
 
 <script>
+  import hotkeys from "hotkeys-js";
+
+  // Open songs
   document.addEventListener("click", function (e) {
     const song = document.getElementById("song") as HTMLAudioElement;
-    song.play();
+    if (song) {
+      song.play();
+    }
   });
+
+  // Hotkeys
+  // hotkeys("*", function (event, handler) {
+  //   if (event) {
+  //     switch (event.key) {
+  //       case "ArrowLeft":
+
+  //         break;
+  //       case "ArrowRight":
+  //         console.log("you pressed arrow right!");
+  //         break;
+  //     }
+  //   }
+  // });
 </script>
 
 <Layout title={title}>
