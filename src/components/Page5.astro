@@ -9,89 +9,30 @@
   import lgThumbnail from "lightgallery/plugins/thumbnail";
   import lgZoom from "lightgallery/plugins/zoom";
 
-  const gallery = document.getElementById("gallery5");
+  const gallery = document.getElementById("lightgallery5") as HTMLElement;
   if (gallery) {
-    const dynamicGallery = lightGallery(gallery, {
-      dynamic: true,
+    lightGallery(gallery, {
       plugins: [lgZoom, lgThumbnail],
-      dynamicEl: [
-        {
-          src: "https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80",
-          responsive:
-            "https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=480&q=80 480, https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80 800",
-          thumb:
-            "https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80",
-          subHtml: `<div class="lightGallery-captions">
-                    <h4>Photo by <a href="https://unsplash.com/@dann">Dan</a></h4>
-                    <p>Published on November 13, 2018</p>
-                </div>`,
-        },
-      ],
-    });
-
-    document.querySelectorAll(".gallery-items-5").forEach((el, index) => {
-      el.addEventListener("click", () => {
-        dynamicGallery.openGallery(index);
-      });
     });
   }
 </script>
 
 <div id="page5" class="pages_page">
   <div class="pages_page__inner">
-    <!-- <div class="logo">Hai Anh & Nam Tran</div> -->
     <div class="pagenumber">4 5</div>
-    <div class="bg" id="gallery5">
-      <div class="photo-album gallery-items-5">
-        <a class="large polaroid img1"
-          ><img
-            src="http://media.24ways.org/2009/14/img/volcanic.jpg"
-            alt=""
-          />This breathtaking volcanic lake is at Wai-O-Tapu Thermal Wonderland</a
-        >
-        <a class="polaroid img2"
-          ><img
-            src="http://media.24ways.org/2009/14/img/waterfall.jpg"
-            alt=""
-          />This lovely waterfall was at Rotorua in Rainbow Springs</a
-        >
-        <a class="small polaroid img3"
-          ><img
-            src="http://media.24ways.org/2009/14/img/leaf.jpg"
-            alt=""
-          />Ferntastic</a
-        >
-        <a class="medium polaroid img4"
-          ><img src="http://media.24ways.org/2009/14/img/whale.jpg" alt="" />At
-          Kaikoura we went whale watching!</a
-        >
-        <a class="polaroid img5"
-          ><img
-            src="http://media.24ways.org/2009/14/img/seal.jpg"
-            alt=""
-          />Found this little cutie on a walk in New Zealand!</a
-        >
-        <a class="polaroid img6"
-          ><img src="http://media.24ways.org/2009/14/img/lake.jpg" alt="" />An
-          amazing bubbling volcanic spring, a bit muddy</a
-        >
-        <a class="polaroid img7"
-          ><img
-            src="http://media.24ways.org/2009/14/img/simon.jpg"
-            alt=""
-          />Simon in a giant Kiwi, pretending to be a Kiwi (the bird)</a
-        >
-        <a class="small polaroid img8"
-          ><img
-            src="http://media.24ways.org/2009/14/img/albatross.jpg"
-            alt=""
-          />Albatross in Dunedin</a
-        >
+    <div class="bg">
+      <div id="lightgallery5" class="photo-album">
+        <a href="http://media.24ways.org/2009/14/img/volcanic.jpg" class="large polaroid img1" ><img src="http://media.24ways.org/2009/14/img/volcanic.jpg" alt="" />This breathtaking volcanic lake is at Wai-O-Tapu Thermal Wonderland</a>
+        <a href="http://media.24ways.org/2009/14/img/waterfall.jpg" class="polaroid img2" ><img src="http://media.24ways.org/2009/14/img/waterfall.jpg" alt="" />This lovely waterfall was at Rotorua in Rainbow Springs</a>
+        <a href="http://media.24ways.org/2009/14/img/leaf.jpg" class="small polaroid img3" ><img src="http://media.24ways.org/2009/14/img/leaf.jpg" alt="" />Ferntastic</a>
+        <a href="http://media.24ways.org/2009/14/img/whale.jpg" class="medium polaroid img4" ><img src="http://media.24ways.org/2009/14/img/whale.jpg" alt="" />At Kaikoura we went whale watching!</a>
+        <a href="http://media.24ways.org/2009/14/img/seal.jpg" class="polaroid img5" ><img src="http://media.24ways.org/2009/14/img/seal.jpg" alt="" />Found this little cutie on a walk in New Zealand!</a>
+        <a href="http://media.24ways.org/2009/14/img/lake.jpg" class="polaroid img6" ><img src="http://media.24ways.org/2009/14/img/lake.jpg" alt="" />An amazing bubbling volcanic spring, a bit muddy</a>
+        <a href="http://media.24ways.org/2009/14/img/simon.jpg" class="polaroid img7" ><img src="http://media.24ways.org/2009/14/img/simon.jpg" alt="" />Simon in a giant Kiwi, pretending to be a Kiwi (the bird)</a>
+        <a href="http://media.24ways.org/2009/14/img/albatross.jpg" class="small polaroid img8" ><img src="http://media.24ways.org/2009/14/img/albatross.jpg" alt="" />Albatross in Dunedin</a>
       </div>
     </div>
-    <!-- <div class="content">
-      <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
-    </div> -->
+    <!-- <div class="content"></div> -->
     <div class="control">
       <label for="two"></label>
     </div>
