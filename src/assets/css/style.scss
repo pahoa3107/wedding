@@ -567,45 +567,57 @@ body {
 
       @media screen and (max-width: 1000px) {
         .pages_page__inner {
+
           .content {
-            overflow: auto !important;
-            -webkit-overflow-scrolling: touch;
-            position: static;
-            max-height: calc(100vh - 50px);
-            display: flex;
-            flex-flow: column;
+            > div {
+              position: initial;
+              padding-left: 10%;
+              padding-bottom: 10%;
+              width: 50%;
+              max-height: 300px;
+              display: flex;
+              flex-direction: column;
+              overflow: scroll !important;
+              overscroll-behavior: contain;
+              pointer-events: auto;
+
+              > * {
+                flex: 0 0 auto;
+                width: 100%;
+              }
+            }
+
+
             h1 {
               font-size: 4vw;
-              order: 1;
               padding: 7.57% 7% 0;
             }
 
             &_picture,
             &_offset {
-              position: static !important;
-              margin-left: 10%;
+              position: initial !important;
               transform: none;
             }
 
             &_picture {
               margin-top: 10px;
               &.left {
-                order: 3;
+                order: 2;
               }
 
               &.right {
-                order: 5;
+                order: 4;
               }
             }
 
             &_offset {
-              width: 45%;
+              width: 100%;
               transform: none;
               &.left {
-                order: 2;
+                order: 1;
               }
               &.right {
-                order: 4;
+                order: 3;
               }
             }
           }
