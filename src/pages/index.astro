@@ -26,18 +26,22 @@ const title = "Hai Anh & Nam Tran Wedding";
   });
 
   // Hotkeys
-  // hotkeys("*", function (event, handler) {
-  //   if (event) {
-  //     switch (event.key) {
-  //       case "ArrowLeft":
+  hotkeys("*", function (event, handler) {
+    if (event) {
+      const btns: any = [...document.querySelectorAll('input[name="trigger"]')];
+      const current = btns.findIndex((btn: any) => btn.checked);
 
-  //         break;
-  //       case "ArrowRight":
-  //         console.log("you pressed arrow right!");
-  //         break;
-  //     }
-  //   }
-  // });
+      switch (event.key) {
+        case "ArrowLeft":
+          btns[(current - 1) % btns.length].checked = true;
+          break;
+
+        case "ArrowRight":
+          btns[(current + 1) % btns.length].checked = true;
+          break;
+      }
+    }
+  });
 </script>
 
 <Layout title={title}>
@@ -46,10 +50,10 @@ const title = "Hai Anh & Nam Tran Wedding";
   </audio>
 
   <main class="pages">
-    <input id="one" name="trigger" type="radio" />
-    <input id="two" name="trigger" type="radio" />
-    <input id="three" name="trigger" type="radio" />
-    <input id="four" name="trigger" type="radio" />
+    <input class="navigation" id="one" name="trigger" type="radio" />
+    <input class="navigation" id="two" name="trigger" type="radio" />
+    <input class="navigation" id="three" name="trigger" type="radio" />
+    <input class="navigation" id="four" name="trigger" type="radio" />
 
     <Page1 />
     <Page2 />
